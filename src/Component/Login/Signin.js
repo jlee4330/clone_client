@@ -23,7 +23,7 @@ export const Signin = (props) => {
         e.preventDefault();
         axios({
             method: 'post',
-            url: '/token',
+            url: 'https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/token',
             data: {
                 email: email,
                 password: password

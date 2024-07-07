@@ -76,7 +76,7 @@ export const MainPage = (props) => {
 
     // 서버로 데이터 저장
     const saveNameToServer = (name) => {
-        axios.post('http://127.0.0.1:5000/saveName', { names: [name] }, {
+        axios.post('https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/saveName', { names: [name] }, {
             headers: {
                 Authorization: 'Bearer ' + props.token
             }
@@ -112,7 +112,7 @@ export const MainPage = (props) => {
         const formData = new FormData();
         formData.append('profileImage', file);
     
-        return axios.post('http://127.0.0.1:5000/uploadProfileImage', formData, {
+        return axios.post('https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/uploadProfileImage', formData, {
             headers: {
                 Authorization: 'Bearer ' + token,
                 'Content-Type': 'multipart/form-data'
@@ -168,7 +168,7 @@ export const MainPage = (props) => {
     function getData() {
         axios({
             method: "GET",
-            url: "http://127.0.0.1:5000/getData",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/getData",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -219,7 +219,7 @@ export const MainPage = (props) => {
     function saveGoals() {
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/saveGoals",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/saveGoals",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -240,7 +240,7 @@ export const MainPage = (props) => {
     function saveSecrets() {
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/saveSecret",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/saveSecret",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -261,7 +261,7 @@ export const MainPage = (props) => {
     function saveInstructions() {
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/saveInstructions",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/saveInstructions",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -283,7 +283,7 @@ export const MainPage = (props) => {
         console.log("Current Day:", currentDay); 
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/response",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/response",
             headers: {
                 Authorization: 'Bearer ' + props.token,
                 
@@ -317,7 +317,7 @@ export const MainPage = (props) => {
     function updateLog(logId, confidence, reason) {
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/update_log",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/update_log",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -375,7 +375,7 @@ export const MainPage = (props) => {
     function sendLogsToBackend(similarLogs, notSimilarLogs) {
         axios({
             method: "POST",
-            url: "http://127.0.0.1:5000/update_log_lists",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/update_log_lists",
             headers: {
                 Authorization: 'Bearer ' + props.token
             },
@@ -394,7 +394,7 @@ export const MainPage = (props) => {
     function logout() {
         axios({
             method: "POST",
-            url: "/logout",
+            url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/logout",
         })
         .then((response) => {
            props.removeToken();
