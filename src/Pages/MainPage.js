@@ -142,7 +142,7 @@ export const MainPage = (props) => {
         formData.append('file', selectedFile);
 
         try {
-            const response = await axios.post('/api/upload_pdf', formData, {
+            const response = await axios.post('https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/api/upload_pdf', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + props.token // Ensure token is included
