@@ -201,7 +201,7 @@ export const MainPage = (props) => {
             }
             axios({
                 method: "POST",
-                url: "/logout",
+                url: "https://port-0-urp-server-lybh5th5ae7b4c34.sel5.cloudtype.app/logout",
             })
             .then((response) => {
                 props.removeToken();
